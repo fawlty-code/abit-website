@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/tt-hoves-pro-trial');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --color-royal-blue: #0916F8;
+    --color-funky-orange: #F7750B;
+    --color-too-red: #F80641;
+    --color-uninteresting-yellow: #FABC0D;
+
+    --font-anton: "Anton";
+    --font-tt-hoves: "TT Hoves Pro Trial";
+}
