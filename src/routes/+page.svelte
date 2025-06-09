@@ -1,5 +1,6 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
+    let colors = ['funky-orange','royal-blue','too-red'];
 </script>
 
 <div class="grid grid-cols-3 p-2">
@@ -23,11 +24,11 @@
 </div>
 
 <div class="flex">
-    <div class="px-4 flex flex-col gap-4 flex-none">
-        <div class="bg-funky-orange min-h-4 min-w-4 p-1.5">ab</div>
-        <div class="bg-royal-blue min-h-4 min-w-4 p-1.5">ab</div>
-        <div class="bg-too-red min-h-4 min-w-4 p-1.5">ab</div>
-        <div class="bg-uninteresting-yellow m-1.5 flex-auto">abc</div>
+    <div class="px-4 py-2 flex flex-col gap-4 flex-none">
+        {#each colors as color}
+            <div class="bg-{color} min-h-4 min-w-4 p-1.5 text-{color}">ab</div>
+        {/each}
+        <div class="bg-uninteresting-yellow m-1.5 text-uninteresting-yellow flex-auto">abc</div>
     </div>
     <div>
         <div class="text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
