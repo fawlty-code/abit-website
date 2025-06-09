@@ -21,3 +21,22 @@
 
     </div>
 </div>
+
+<div class="flex">
+    <div class="px-4 flex flex-col gap-4 flex-none">
+        <div class="bg-funky-orange min-h-4 min-w-4 p-1.5">ab</div>
+        <div class="bg-royal-blue min-h-4 min-w-4 p-1.5">ab</div>
+        <div class="bg-too-red min-h-4 min-w-4 p-1.5">ab</div>
+        <div class="bg-uninteresting-yellow m-1.5 flex-auto">abc</div>
+    </div>
+    <div>
+        <div class="text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
+        <div class="text-slate-gray font-aileron text-lg pl-0.5 py-2">
+            <a href="https://sites.google.com/view/brewindia/brew-esa-2024"><b><u>Behavioural Research in Economics Workshop</u></b></a><br>
+            BREW, hosted by Ashoka University and Centre for Social and Behaviour Change, was a 3-day conference with 84 behavioural scientists and presenters from around the world, making it the largest BREW yet! <br><br>ABIT helped with event logistics, student poster presentations alongside a fantastic team of student volunteers. 11 students from Psychology and Economics showcased their research ranging from topics like common pool resources and substance use among Tibetan youth.
+        </div>
+    </div>
+    <div class="grid grid-cols-4 pl-4">
+        
+    </div>
+</div>
