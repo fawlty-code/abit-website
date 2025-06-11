@@ -1,5 +1,6 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
+    import Boxset from '$lib/boxset.svelte';
 </script>
 
 <div class="grid grid-cols-3 p-2">
@@ -24,13 +25,11 @@
 
 <div class="flex">
     <div class="px-4 py-2 flex flex-col gap-4 flex-none">
-        <div class="bg-funky-orange min-h-4 min-w-4 p-1.5 text-funky-orange">ab</div>
-        <div class="bg-royal-blue min-h-4 min-w-4 p-1.5 text-royal-blue">ab</div>
-        <div class="bg-too-red min-h-4 min-w-4 p-1.5 text-too-red">ab</div>
-        <div class="bg-uninteresting-yellow m-1.5 text-uninteresting-yellow flex-auto">abc</div>
+        <Boxset></Boxset>
+        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto">abc</div>
     </div>
     <div>
-        <div class="text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
+        <div class="py-2 text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
         <div class="text-slate-gray font-aileron text-lg pl-0.5 py-2">
             <a href="https://sites.google.com/view/brewindia/brew-esa-2024"><b><u>Behavioural Research in Economics Workshop</u></b></a><br>
             BREW, hosted by Ashoka University and Centre for Social and Behaviour Change, was a 3-day conference with 84 behavioural scientists and presenters from around the world, making it the largest BREW yet! <br><br>ABIT helped with event logistics, student poster presentations alongside a fantastic team of student volunteers. 11 students from Psychology and Economics showcased their research ranging from topics like common pool resources and substance use among Tibetan youth.
@@ -38,7 +37,7 @@
     </div>
     <div class="grid grid-cols-4 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
         <button class="col-start-1 row-auto text-3xl text-white">⫷</button>
-        <img class="col-span-2 py-12" src="" alt="">
+        <img class="col-span-2 py-12" src="" alt="alt text">
         <button class="col-start-4 row-auto text-3xl text-white">⫸</button>
     </div>
 </div>
