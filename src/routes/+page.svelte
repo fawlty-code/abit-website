@@ -1,6 +1,7 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
     import Boxset from '$lib/boxset.svelte';
+    import Breadcrumbs from '$lib/breadcrumbs.svelte';
 </script>
 
 <div class="grid grid-cols-3 p-2">
@@ -37,7 +38,14 @@
     </div>
     <div class="grid grid-cols-4 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
         <button class="col-start-1 row-auto text-3xl text-white">⫷</button>
-        <img class="col-span-2 py-12" src="" alt="alt text">
+        <img class="col-span-2 py-12" src={deco} alt="alt text">
         <button class="col-start-4 row-auto text-3xl text-white">⫸</button>
     </div>
 </div>
+
+<div class="px-4 flex">
+    <Boxset></Boxset>
+    <div class="px-4.5 self-center text-5xl text-royal-blue font-tt-hoves font-bold">What We Do?</div>
+</div>
+
+<Breadcrumbs></Breadcrumbs>
