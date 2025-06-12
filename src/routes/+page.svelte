@@ -1,5 +1,10 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
+    import consuma from '$lib/assets/consuma-logo.png'
+    import iben from '$lib/assets/iben-logo.png'
+    import infoedge from '$lib/assets/infoedge-logo.png'
+    import rockethealth from '$lib/assets/rocket-health-logo.png'
+    import csbc from '$lib/assets/csbc-logo.png'
     import Boxset from '$lib/boxset.svelte';
     import Breadcrumbs from '$lib/breadcrumbs.svelte';
 </script>
@@ -48,3 +53,20 @@
     <div class="px-4.5 self-center text-5xl text-royal-blue font-tt-hoves font-bold">What We Do?</div>
 </div>
 <Breadcrumbs></Breadcrumbs>
+
+<div class="flex">
+    <div class="px-4 py-2 flex flex-col gap-4 flex-none">
+        <Boxset></Boxset>
+        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto">abc</div>
+    </div>
+    <div>
+        <div class="py-2 text-5xl text-too-red font-tt-hoves font-bold relative -bottom-21">Partners</div>
+        <div class="grid gap-3 p-3 grid-cols-3 relative -bottom-24">
+            <img src={rockethealth} alt="rocket-health-logo">
+            <img src={csbc} alt="csbc-logo">
+            <img src={consuma} alt="consuma-logo">
+            <img src={infoedge} alt="infoedge-logo">            
+            <img src={iben} alt="iben-logo">
+        </div>
+    </div>
+</div>
