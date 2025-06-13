@@ -1,10 +1,12 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
-    import consuma from '$lib/assets/consuma-logo.png'
-    import iben from '$lib/assets/iben-logo.png'
-    import infoedge from '$lib/assets/infoedge-logo.png'
-    import rockethealth from '$lib/assets/rocket-health-logo.png'
-    import csbc from '$lib/assets/csbc-logo.png'
+    import arches from '$lib/assets/arches.png';
+    import consuma from '$lib/assets/consuma-logo.png';
+    import iben from '$lib/assets/iben-logo.png';
+    import infoedge from '$lib/assets/infoedge-logo.png';
+    import rockethealth from '$lib/assets/rocket-health-logo.png';
+    import csbc from '$lib/assets/csbc-logo.png';
+    import stories from '$lib/assets/1001-stories-logo.jpg';
     import Boxset from '$lib/boxset.svelte';
     import Breadcrumbs from '$lib/breadcrumbs.svelte';
 </script>
@@ -59,14 +61,16 @@
         <Boxset></Boxset>
         <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto">abc</div>
     </div>
-    <div>
-        <div class="py-2 text-5xl text-too-red font-tt-hoves font-bold relative -bottom-21">Partners</div>
-        <div class="grid gap-3 p-3 grid-cols-3 relative -bottom-24">
-            <img src={rockethealth} alt="rocket-health-logo">
-            <img src={csbc} alt="csbc-logo">
-            <img src={consuma} alt="consuma-logo">
-            <img src={infoedge} alt="infoedge-logo">            
-            <img src={iben} alt="iben-logo">
+    <div class="relative -bottom-21">
+        <div class="py-2 text-5xl text-too-red font-tt-hoves font-bold">Partners</div>
+        <div class="grid gap-3 py-3 grid-cols-6">
+            <img src={consuma} alt="consuma-logo" class="self-center col-start-1 col-span-2">
+            <img src={csbc} alt="csbc-logo" class="self-center col-start-4 col-span-2">
+            <img src={rockethealth} alt="rocket-health-logo" class="self-center col-start-2 col-span-2">
+            <img src={infoedge} alt="infoedge-logo" class="self-center col-start-5 col-span-2">            
+            <img src={iben} alt="iben-logo" class="self-center col-span-2">
+            <img src={stories} alt="1001-stories-logo" class="self-center col-start-4 col-span-2">
         </div>
     </div>
+    <img src={arches} alt="arches" class="pl-3">
 </div>
