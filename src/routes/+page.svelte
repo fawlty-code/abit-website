@@ -34,7 +34,7 @@
 <div class="flex">
     <div class="px-4 py-2 flex flex-col gap-4 flex-none">
         <Boxset></Boxset>
-        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto">abc</div>
+        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto w-6"></div>
     </div>
     <div>
         <div class="py-2 text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
@@ -59,7 +59,7 @@
 <div class="flex">
     <div class="px-4 py-2 flex flex-col gap-4 flex-none">
         <Boxset></Boxset>
-        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto">abc</div>
+        <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto w-6"></div>
     </div>
     <div class="relative -bottom-21">
         <div class="py-2 text-5xl text-too-red font-tt-hoves font-bold">Partners</div>
