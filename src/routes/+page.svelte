@@ -1,6 +1,10 @@
 <script>
     import deco from '$lib/assets/deco-bg.png';
     import arches from '$lib/assets/arches.png';
+    import leaves from '$lib/assets/too-red-leaves.png';
+    import smallarch from '$lib/assets/uninteresting-yellow-arch.png';
+    import circle from '$lib/assets/funky-orange-circle.png';
+    import star from '$lib/assets/royal-blue-star.png';
     import consuma from '$lib/assets/consuma-logo.png';
     import iben from '$lib/assets/iben-logo.png';
     import infoedge from '$lib/assets/infoedge-logo.png';
@@ -47,6 +51,35 @@
         <button class="col-start-1 row-auto text-3xl text-white">⫷</button>
         <img class="col-span-2 py-12" src={deco} alt="alt text">
         <button class="col-start-4 row-auto text-3xl text-white">⫸</button>
+    </div>
+</div>
+
+<div class="flex justify-between">
+    <span class="bg-slate-gray font-anton text-off-white font-extrabold text-6xl p-3 rounded-3xl">
+        BEHAVIOURAL SCIENCES
+    </span>
+
+    <div class="flex flex-row p-4.5">
+        <div class="m-7.5">
+        </div>
+        <div class="grid grid-cols-6 grid-rows-6 pr-6 gap-1.5 text-off-white text-xl font-semibold font-tt-hoves">
+            <div class="flex bg-slate-gray p-3 rounded-2xl row-start-1 row-span-3 col-start-2 col-span-2">
+                <img src={leaves} alt="leaves" height="100" width="100">
+                <span>What is it?</span>
+            </div>
+            <div class="flex bg-slate-gray p-3 rounded-2xl row-start-2 row-span-2 col-start-4 col-span-3">
+                <span>Why do we need it?</span>
+                <img src={circle} alt="circle" height="100" width="100">
+            </div>
+            <div class="flex bg-slate-gray p-3 rounded-2xl row-start-4 row-span-3 col-start-4 col-span-2">
+                <img src={star} alt="star" height="100" width="100">
+                <span>What is the scope for the future?</span>
+            </div>
+            <div class="flex bg-slate-gray p-3 rounded-2xl row-start-4 row-span-2 col-start-1 col-span-3">
+                <img src={smallarch} alt="arch" height="100" width="100">
+                <span>How does ABIT contribute to it?</span>
+            </div>
+        </div>
     </div>
 </div>
 
