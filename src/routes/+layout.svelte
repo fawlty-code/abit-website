@@ -1,15 +1,16 @@
 <script>
-  import { getRequestEvent } from '$app/server';
+    import { getRequestEvent } from '$app/server';
 	import '../app.css';
 
 	let { children } = $props();
 
+    import icon from '$lib/assets/abit.png';
     const routes = ['collaborations', 'publications', 'research'];
 </script>
 
 <nav class="flex justify-between px-9 py-2 bg-off-white border-b-2 border-uninteresting-yellow sticky top-0 z-100" transition:headerConstrict>
-    <a href="/" class="px-4.5 py-1.5 text-2xl text-too-red font-anton font-bold">ICON</a>
-    <div class="flex">
+    <a href="/" class="px-4.5 py-1.5 text-2xl text-too-red font-anton font-bold"><img src={icon} alt="abit-logo" width="128"></a>
+    <div class="flex items-center">
     {#each routes as route}
         <a href="\{route}" class="px-4.5 py-1.5 text-xl text-funky-orange font-tt-hoves font-bold text-center hover:text-royal-blue">{route.charAt(0).toUpperCase() + route.slice(1)}</a>
     {/each}
