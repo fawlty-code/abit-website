@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://use.typekit.net/fyn8ead.css');
 @import url('https://fonts.cdnfonts.com/css/dreamwalker');
+@import url('https://fonts.cdnfonts.com/css/unbounded');
 
 @import 'tailwindcss';
 
@@ -17,10 +18,12 @@
     --color-grad-pink: #FF4271;
     --color-grad-indigo: #1317F2;
     --color-grad-magenta: #A032A5;
-    --color-off-white: #F2F2EB;
+    --color-off-white: #EFE9CE;
+    --color-bg-white: #F2F2EB;
 
     --font-anton: "Anton";
     --font-tt-hoves: "TT Hoves Pro Trial";
     --font-aileron: "Aileron";
-    --font-dreamwalker: "Dreamwalker"
+    --font-dreamwalker: "Dreamwalker";
+    --font-unbounded: "Unbounded";
 }
