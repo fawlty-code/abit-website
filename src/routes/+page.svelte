@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<div class="m-3 bg-center h-72 w-full bg-[radial-gradient(circle,#373737_3px,transparent_2px)] bg-[size:30px_30px]"></div>
+<div class="bg-center h-72 bg-[radial-gradient(circle,#373737_3px,transparent_2px)] bg-[size:30px_30px]"></div>
 
 <div class="px-4 flex">
     <Boxset></Boxset>
@@ -112,7 +112,7 @@
 </div>
 
 <div class="grid grid-cols-1 grid-rows-1 h-90 bg-[url('$lib/assets/abit.png')] bg-center bg-contain bg-no-repeat">
-    <span class="backdrop-blur-md text-royal-blue text-8xl text-center font-unbounded font-extrabold self-center py-37.5">
+    <span class="backdrop-blur-md text-royal-blue text-8xl text-center font-unbounded font-extrabold self-center py-33">
         Connect
     </span>
 </div>
