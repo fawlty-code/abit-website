@@ -65,7 +65,7 @@
     <div class="grid grid-cols-4 grid-rows-1 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
         <button onclick={(event) => {changeImage(1)}} class="col-start-1 row-auto text-3xl text-white">⫷</button>
         {#each images as img, i}
-        <img class="col-start-2 col-span-2 row-start-1 self-center   py-12 transition-opacity duration-500 {index === i ? 'opacity-100' : 'opacity-0'}" src={img} alt={`Event ${i + 1}`} loading="lazy">
+        <img class="col-start-2 col-span-2 row-start-1 self-center py-12 transition-opacity duration-500 {index === i ? 'opacity-100' : 'opacity-0'}" src={img} alt={`Event ${i + 1}`} loading="lazy">
         {/each}
         <button onclick={(event) => {changeImage(-1)}} class="col-start-4 row-auto text-3xl text-white h-full">⫸</button>
     </div>
