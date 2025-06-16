@@ -5,14 +5,29 @@
     import smallarch from '$lib/assets/uninteresting-yellow-arch.png';
     import circle from '$lib/assets/funky-orange-circle.png';
     import star from '$lib/assets/royal-blue-star.png';
+    
     import consuma from '$lib/assets/consuma-logo.png';
     import iben from '$lib/assets/iben-logo.png';
     import infoedge from '$lib/assets/infoedge-logo.png';
     import rockethealth from '$lib/assets/rocket-health-logo.png';
     import csbc from '$lib/assets/csbc-logo.png';
     import stories from '$lib/assets/1001-stories-logo.jpg';
+    
     import Boxset from '$lib/boxset.svelte';
     import Breadcrumbs from '$lib/breadcrumbs.svelte';
+
+    import event1 from '$lib/assets/event_1.png';
+    import event2 from '$lib/assets/event_2.png';
+    import event3 from '$lib/assets/event_3.png';
+    import event4 from '$lib/assets/event_4.png';
+    import event5 from '$lib/assets/event_5.png';
+    import event6 from '$lib/assets/event_6.png';
+    
+    let index = $state(0);
+    const images = [event1, event2, event3, event4, event5, event6];
+    function changeImage(i) {
+        index = (index + i + images.length) % images.length;
+    }
 </script>
 
 <div class="grid grid-cols-3 p-2">
@@ -47,10 +62,12 @@
             BREW, hosted by Ashoka University and Centre for Social and Behaviour Change, was a 3-day conference with 84 behavioural scientists and presenters from around the world, making it the largest BREW yet! <br><br>ABIT helped with event logistics, student poster presentations alongside a fantastic team of student volunteers. 11 students from Psychology and Economics showcased their research ranging from topics like common pool resources and substance use among Tibetan youth.
         </div>
     </div>
-    <div class="grid grid-cols-4 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
-        <button class="col-start-1 row-auto text-3xl text-white">⫷</button>
-        <img class="col-span-2 py-12" src={deco} alt="alt text">
-        <button class="col-start-4 row-auto text-3xl text-white">⫸</button>
+    <div class="grid grid-cols-4 grid-rows-1 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
+        <button onclick={(event) => {changeImage(1)}} class="col-start-1 row-auto text-3xl text-white">⫷</button>
+        {#each images as img, i}
+        <img class="col-start-2 col-span-2 row-start-1 self-center   py-12 transition-opacity duration-500 {index === i ? 'opacity-100' : 'opacity-0'}" src={img} alt={`Event ${i + 1}`} loading="lazy">
+        {/each}
+        <button onclick={(event) => {changeImage(-1)}} class="col-start-4 row-auto text-3xl text-white h-full">⫸</button>
     </div>
 </div>
 
