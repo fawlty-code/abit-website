@@ -1,4 +1,8 @@
 <script>
+    import au1 from '$lib/assets/au-1.jpg';
+    import au2 from '$lib/assets/au-2.jpg';
+    import au3 from '$lib/assets/au-3.jpg';
+
     import arches from '$lib/assets/arches.png';
     import leaves from '$lib/assets/too-red-leaves.png';
     import smallarch from '$lib/assets/uninteresting-yellow-arch.png';
@@ -28,9 +32,36 @@
         index = (index + i + images.length) % images.length;
     }
 
-    import au1 from '$lib/assets/au-1.jpg';
-    import au2 from '$lib/assets/au-2.jpg';
-    import au3 from '$lib/assets/au-3.jpg';
+    import { fly } from 'svelte/transition';
+    
+    let eventVisible = $state(false);
+    let whatwedoVisible = $state(false);
+    let partnersVisible = $state(false);
+
+    function inView(node, k) {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                if(k==1) {
+                    eventVisible = true;
+                }
+                else if(k==2) {
+                    whatwedoVisible = true;
+                }
+                else if(k==3) {
+                    partnersVisible = true;
+                }
+                observer.unobserve(node);
+            }
+        }, { threshold: 0.1 });
+
+        observer.observe(node);
+
+        return {
+            destroy() {
+            observer.disconnect();
+            }
+        };
+    }
 </script>
 
 <div class="grid grid-cols-3 p-2">
@@ -54,8 +85,12 @@
         <Boxset></Boxset>
         <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto w-6"></div>
     </div>
-    <div>
-        <div class="py-2 text-5xl text-funky-orange font-tt-hoves font-bold">Recent Events</div>
+    <div use:inView={1}>
+        {#if eventVisible}
+        <div class="py-2 text-5xl text-funky-orange font-tt-hoves font-bold" transition:fly={{y:25, duration:1000}}>Recent Events</div>
+        {:else}
+        <div class="py-2 text-5xl text-funky-orange font-tt-hoves font-bold opacity-0">Recent Events</div>
+        {/if}
         <div class="text-slate-gray font-aileron text-lg pl-0.5 py-2">
             <a href="https://sites.google.com/view/brewindia/brew-esa-2024"><b><u>Behavioural Research in Economics Workshop</u></b></a><br>
             BREW, hosted by Ashoka University and Centre for Social and Behaviour Change, was a 3-day conference with 84 behavioural scientists and presenters from around the world, making it the largest BREW yet! <br><br>ABIT helped with event logistics, student poster presentations alongside a fantastic team of student volunteers. 11 students from Psychology and Economics showcased their research ranging from topics like common pool resources and substance use among Tibetan youth.
@@ -64,7 +99,7 @@
     <div class="grid grid-cols-4 grid-rows-1 my-4 ml-2 pl-2 bg-gradient-to-r from-grad-pink via-grad-magenta to-grad-indigo border-hidden rounded-l-full">
         <button onclick={(event) => {changeImage(1)}} class="col-start-1 row-auto text-3xl text-white">⫷</button>
         {#each images as img, i}
-        <img class="col-start-2 col-span-2 row-start-1 self-center py-12 transition-opacity duration-500 {index === i ? 'opacity-100' : 'opacity-0'}" src={img} alt={`Event ${i + 1}`} loading="lazy">
+        <img class="col-start-2 col-span-2 row-start-1 self-center py-12 transition-opacity duration-500 {index === i ? 'opacity-100' : 'opacity-0'}" src={img} alt={`Event ${i + 1}`} loading="{index === 1 ? 'eager' : 'lazy'}">
         {/each}
         <button onclick={(event) => {changeImage(-1)}} class="col-start-4 row-auto text-3xl text-white h-full">⫸</button>
     </div>
@@ -101,7 +136,13 @@
 
 <div class="px-4 flex">
     <Boxset></Boxset>
-    <div class="px-4.5 self-center text-5xl text-royal-blue font-tt-hoves font-bold">What We Do?</div>
+    <div class="self-center" use:inView={2}>
+    {#if whatwedoVisible}
+        <span class="px-4.5 text-5xl text-royal-blue font-tt-hoves font-bold" transition:fly={{delay:100, y:100, duration:1000}}>What We Do?</span>
+    {:else}
+        <span class="px-4.5 text-5xl text-royal-blue font-tt-hoves font-bold opacity-0">What We Do?</span>
+    {/if}
+    </div>
 </div>
 <Breadcrumbs></Breadcrumbs>
 
@@ -111,7 +152,13 @@
         <div class="bg-uninteresting-yellow mx-3 text-uninteresting-yellow flex-auto w-6"></div>
     </div>
     <div class="relative -bottom-21">
-        <div class="py-2 text-5xl text-too-red font-tt-hoves font-bold">Partners</div>
+        <div use:inView={3}>
+        {#if partnersVisible}
+            <span class="py-2 text-5xl text-too-red font-tt-hoves font-bold" transition:fly={{delay:200, y:100, duration:1000}}>Partners</span>
+        {:else}
+            <span class="py-2 text-5xl text-too-red font-tt-hoves font-bold opacity-0">Partners</span>
+        {/if}
+        </div>
         <div class="grid gap-3 py-3 grid-cols-6">
             <img src={consuma} alt="consuma-logo" class="self-center col-start-1 col-span-2">
             <img src={csbc} alt="csbc-logo" class="self-center col-start-4 col-span-2">
