@@ -117,7 +117,7 @@
                 imageSrc={leaves}
                 imageSize=120
                 cardTitle="What is it?"
-                titleProps='text-right'
+                titleProps='self-end'
                 cardText="idk mate"/>
                 
                 <Card 
@@ -132,7 +132,7 @@
                 <Card 
                 gridProps='row-start-4 row-span-2 col-start-2 col-span-2' 
                 imageSrc={star}
-                imageSize=120
+                imageSize=100
                 imageProps="self-start"
                 cardTitle="What is the scope for the future?"
                 titleProps="self-end"
@@ -142,7 +142,7 @@
                 gridProps='row-start-4 row-span-3 col-start-4 col-span-2' 
                 imageSrc={smallarch}
                 imageProps="self-start"
-                imageSize=120
+                imageSize=100
                 cardTitle="How does ABIT contribute to the study?"
                 titleProps="self-end"
                 cardText="idk mate"/>
@@ -161,7 +161,7 @@
     {/if}
     </div>
 </div>
-<Breadcrumbs></Breadcrumbs>
+<Breadcrumbs class="overflow-clip"></Breadcrumbs>
 
 <div class="pl-1.5 flex">
     <Boxset trailing=true />
