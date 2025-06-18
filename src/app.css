@@ -6,9 +6,6 @@
 
 @import 'tailwindcss';
 
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-
 @theme {
     --color-royal-blue: #0916F8;
     --color-funky-orange: #F7750B;
