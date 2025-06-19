@@ -1,6 +1,5 @@
 <script>
-    import { getRequestEvent } from '$app/server';
-	import '../app.css';
+    import '../app.css';
 
 	let { children } = $props();
 

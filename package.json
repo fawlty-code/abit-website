@@ -10,16 +10,16 @@
 		"prepare": "svelte-kit sync || echo ''"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/adapter-auto": "^6.0.1",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.16.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"@tailwindcss/forms": "^0.5.9",
-		"@tailwindcss/typography": "^0.5.15",
-		"@tailwindcss/vite": "^4.1.8",
-		"svelte": "^5.0.0",
-		"tailwindcss": "^4.1.8",
-		"vite": "^6.2.6"
+		"@sveltejs/kit": "^2.21.5",
+		"@sveltejs/vite-plugin-svelte": "^5.1.0",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.1.10",
+		"svelte": "^5.34.7",
+		"tailwindcss": "^4.1.10",
+		"vite": "^6.3.5"
 	},
 	"dependencies": {
 		"mode-watcher": "^1.0.8"
