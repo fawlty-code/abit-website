@@ -1,4 +1,4 @@
-<div class="flex py-3 text-white font-aileron font-extrabold text-3xl">
+<div class="flex py-3 text-white font-aileron font-extrabold text-3xl overflow-clip">
     <div class="breadcrumb bg-uninteresting-yellow relative -left-33"></div>
     <div class="breadcrumb bg-funky-orange relative -left-45"><a href="https://csbc.org.in/">Consulting</a></div>
     <div class="breadcrumb bg-royal-blue relative -left-57"><a href="/research">Research</a></div>
