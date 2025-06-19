@@ -4,7 +4,6 @@
 	let { children } = $props();
 
     import icon from '$lib/assets/abit.png';
-    const routes = ['collaborations', 'publications', 'research'];
 
     let breakpoint = $state(0);
 </script>
@@ -14,9 +13,9 @@
 <nav class="flex justify-between bg-bg-white border-b-2 border-uninteresting-yellow sticky top-0 z-100 {breakpoint > 18 ? 'px-9 py-1' : 'mx-12 py-2'} transition-all duration-300">
     <a href="/" class="px-4.5 py-1.5 text-2xl text-too-red font-anton font-bold"><img src={icon} alt="abit-logo" width="128"></a>
     <div class="flex items-center">
-    {#each routes as route}
-        <a href="\{route}" class="px-4.5 py-1.5 text-xl text-funky-orange font-tt-hoves font-bold text-center hover:text-royal-blue">{route.charAt(0).toUpperCase() + route.slice(1)}</a>
-    {/each}
+    <a href="\collaborations" class="px-4.5 py-1.5 text-xl text-funky-orange font-tt-hoves font-bold text-center hover:text-royal-blue">Collaborations</a>
+    <a href="\publications" class="px-4.5 py-1.5 text-xl text-funky-orange font-tt-hoves font-bold text-center hover:text-royal-blue">Publications</a>
+    <a href="\research" class="px-4.5 py-1.5 text-xl text-funky-orange font-tt-hoves font-bold text-center hover:text-royal-blue">Research</a>
 	</div>
 </nav>
 
